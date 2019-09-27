@@ -10,30 +10,13 @@ import javafx.stage.Stage;
 public class FXProgram extends Application {
 
   public void start(Stage stage){
-    Text quote = new Text(70, 80, "It's not goodbye forever, it's just goodbye for now");
-    Text author = new Text(100, 120, "~ Gillian McMahon");
-    Rectangle r = new Rectangle();
-    r.setX(50);
-    r.setY(50);
-    r.setWidth(300);
-    r.setHeight(100);
-    r.setArcWidth(20);
-    r.setArcHeight(20);
-
-    Line line = new Line();
-    line.setStartX(110.0f);
-    line.setStartY(110.0f);
-    line.setEndX(110.0f);
-    line.setEndY(110.0f);
+    final double WIDTH = 600;
+    final double HEIGHT = 800;
 
 
-    r.setStroke(Color.BLUE);
-    r.setFill(null);
 
-    line.setFill(Color.BLUE);
-
-    Group root = new Group(quote, author, r, line);
-    Scene scene = new Scene(root, 300, 120, Color.LIGHTGREEN);
+    Group root = new Group();
+    Scene scene = new Scene(root, WIDTH, HEIGHT, Color.LIGHTBLUE);
 
     stage.setTitle("FXProgram");
     stage.setScene(scene);
